@@ -12,7 +12,7 @@ for **`riscv64` / RISC-V 64 bit** devices
 
 ### pip
 
-**`pip install torch --prefer-binary --find-links https://rv.kmtea.eu/wheels.html`**
+**`pip install torch --prefer-binary --extra-index-url https://rv.kmtea.eu/simple`**
 
 To pick the `whl` files manually, please check the **[releases](https://github.com/KumaTea/pytorch-riscv64/releases)**.
 
