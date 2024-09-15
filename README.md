@@ -6,17 +6,15 @@
 wheels (whl)
 for **`riscv64` / RISC-V 64 bit** devices
 
----
-
 ## Install
 
 ### pip
 
-**`pip install torch --prefer-binary --extra-index-url https://rv.kmtea.eu/simple`**
+**`pip install torch --prefer-binary --extra-index-url https://ext.kmtea.eu/simple`**
 
-To pick the `whl` files manually, please check the **[releases](https://github.com/KumaTea/pytorch-riscv64/releases)**.
-
----
+* preferred index: **https://ext.kmtea.eu/simple**
+* targeted index: https://rv.kmtea.eu/simple
+* manually pick `whl` files: **[releases](https://github.com/KumaTea/pytorch-riscv64/releases)**
 
 ## FAQ
 
