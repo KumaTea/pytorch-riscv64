@@ -53,8 +53,23 @@ for **`riscv64` / RISC-V 64 bit** devices
   dpkg -i checkinstall_1.6.2+riscv64patched-ubuntu2204_riscv64.deb
   ```
 
-## FAQ
+4. Prepare Building Environment
 
-* Q: Which versions of Python will be built?
+  [install-deps.sh](src/install-deps.sh)
 
-  A: Following the official PyTorch builds.
+  ```bash
+  python3 -m pip config set global.extra-index-url https://ext.kmtea.eu/simple
+
+  python3 -m pip install -U pip setuptools wheel auditwheel
+  python3 -m pip install -U cffi dataclasses future oldest-supported-numpy pillow pyyaml requests six typing_extensions tqdm
+  ```
+
+5. Build PyTorch
+
+  [torch.sh](build/torch.sh)
+
+  ```bash
+  python3 setup.py build
+  python3 setup.py install
+  python3 setup.py bdist_wheel
+  ```
