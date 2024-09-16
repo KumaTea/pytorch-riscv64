@@ -50,7 +50,8 @@ RUN set -ex && \
     apt update && \
     apt install -y \
         bash build-essential ca-certificates curl checkinstall cmake \
-        libffi-dev libjpeg-turbo8-dev libssl-dev nano ninja-build wget xz-utils zlib1g-dev && \
+        libffi-dev libjpeg-turbo8-dev libssl-dev \
+        nano ninja-build pkg-config wget xz-utils zlib1g-dev && \
     apt clean && \
     (rm -rf /root/.cache/* || echo "No cache in .cache") && \
     (rm -rf /var/cache/* || echo "No cache in /var") && \

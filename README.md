@@ -41,6 +41,18 @@ for **`riscv64` / RISC-V 64 bit** devices
 
 3. Install Python
 
+  From the image built above, install Python:
+  [build-python.sh](src/build-python.sh)
+
+  You can also use my prebuilt binaries:
+
+  ```bash
+  wget https://github.com/KumaTea/pytorch-riscv64/releases/download/2.4/python3.12_3.12.6+ubuntu2204_riscv64.deb
+  wget https://github.com/KumaTea/pytorch-riscv64/releases/download/2.4/checkinstall_1.6.2+riscv64patched-ubuntu2204_riscv64.deb
+  dpkg -i python3.12_3.12.6+ubuntu2204_riscv64.deb
+  dpkg -i checkinstall_1.6.2+riscv64patched-ubuntu2204_riscv64.deb
+  ```
+
 ## FAQ
 
 * Q: Which versions of Python will be built?
