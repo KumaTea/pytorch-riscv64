@@ -13,7 +13,6 @@ for **`riscv64` / RISC-V 64 bit** devices
 **`pip install torch --prefer-binary --extra-index-url https://ext.kmtea.eu/simple`**
 
 * preferred index: **https://ext.kmtea.eu/simple**
-* targeted index: https://rv.kmtea.eu/simple
 * manually pick `whl` files: **[releases](https://github.com/KumaTea/pytorch-riscv64/releases)**
 
 ## Build
@@ -53,6 +52,8 @@ for **`riscv64` / RISC-V 64 bit** devices
   dpkg -i checkinstall_1.6.2+riscv64patched-ubuntu2204_riscv64.deb
   ```
 
+  I must mention that `checkinstall` takes a horrible 6.5 hours to simply pack a Python installation.
+
 4. Prepare Building Environment
 
   [install-deps.sh](src/install-deps.sh)
@@ -70,6 +71,12 @@ for **`riscv64` / RISC-V 64 bit** devices
 
   ```bash
   python3 setup.py build
-  python3 setup.py install
+  python3 setup.py develop
   python3 setup.py bdist_wheel
+  ```
+
+6. Audit Wheel (Optional)
+
+  ```bash
+  LD_LIBRARY_PATH=/path/to/torch/build/lib auditwheel repair dist/*.whl --plat manylinux_2_35_riscv64
   ```

@@ -26,5 +26,6 @@ $PYTHON_EXE setup.py build
 # export USE_BREAKPAD=0
 
 python3 setup.py build
-python3 setup.py install
+python3 setup.py develop
+# python3 setup.py install
 python3 setup.py bdist_wheel
